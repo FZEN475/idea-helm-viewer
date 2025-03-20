@@ -14,7 +14,6 @@ import com.intellij.openapi.project.Project;
 import org.intellij.sdk.settings.AppSettings;
 import org.jetbrains.annotations.NotNull;
 
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 

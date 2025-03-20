@@ -1,5 +1,7 @@
 include:
-  - local: 'CI/root.gitlab-ci.yaml'
+  - project: 'library/ci'
+    file:
+      - 'root.gitlab-ci.yaml'
     inputs:
       merge_branch_action: delete
       gradle_builder: true
