@@ -1,0 +1,35 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <id>com.github.firzen475.helmeditor</id>
+    <name>Idea-Helm-Viewer</name>
+    <vendor>firzen475</vendor>
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+    <extensions defaultExtensionNs="com.intellij">
+        <projectConfigurable  parentId="tools" instance="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 id="org.intellij.sdk.settings.AppSettingsConfigurable"
+                                 displayName="Helm Viewer Settings."/>
+        <applicationService serviceImplementation="org.intellij.sdk.settings.AppSettings"/>
+    </extensions>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <toolWindow id="Helm viewer" secondary="true" icon="AllIcons.Toolwindows.WebToolWindow" anchor="right"
+                    factoryClass="org.intellij.sdk.toolWindow.CalendarToolWindowFactory"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <configurationType
+                implementation="org.intellij.sdk.executor.Runner.RunConfigurationType"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <typedHandler implementation="org.intellij.sdk.executor.Handlers.MyTypedHandler"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <backspaceHandlerDelegate implementation="org.intellij.sdk.executor.Handlers.MyBackspaceHandler"/>
+    </extensions>
+    <extensions defaultExtensionNs="com.intellij">
+        <notificationGroup id="Viewer Notification Group"
+                           displayType="BALLOON"/>
+    </extensions>
+</idea-plugin>

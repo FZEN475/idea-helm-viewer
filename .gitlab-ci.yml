@@ -1,0 +1,9 @@
+include:
+  - local: 'CI/root.gitlab-ci.yaml'
+    inputs:
+      merge_branch_action: delete
+      gradle_builder: true
+
+variables:
+  CI_DEBUG_TRACE: "true"
+
