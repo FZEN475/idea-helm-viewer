@@ -1,0 +1,23 @@
+include:
+  - project: 'library/ci'
+    file:
+      - 'root.gitlab-ci.yaml'
+    inputs:
+      merge_branch_action: delete
+      gradle_builder: true
+
+
+workflow:
+  rules:
+    - if: "$CI_COMMIT_TAG"
+      variables:
+        ORG_GRADLE_PROJECT_pluginVersion: "$CI_COMMIT_TAG"
+        EXTENCION: ".zip"
+    - when: always
+
+variables:
+  CI_DEBUG_TRACE: "true"
+
+
+
+
