@@ -9,5 +9,6 @@ include:
 
 variables:
   CI_DEBUG_TRACE: "true"
+  ORG_GRADLE_PROJECT_pluginVersion: "0.9"
 
 
