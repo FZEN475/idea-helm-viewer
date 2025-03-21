@@ -7,8 +7,8 @@
   * Обновление зависимостей.
   * Возможность указать ca.crt репозитория с зависимостями.
   * Возможность указать логин и пароль репозитория с зависимостями.
-cswssaxsss
-## Settings
+cswssaxsssx
+## Settings 
 * `Project chart path` - директория с Chart.yaml
 * `Values path` - путь к файлу values.yaml
 * `Helm path` - путь к утилите helm.exe
