@@ -5,6 +5,7 @@ include:
     inputs:
       merge_branch_action: delete
       gradle_builder: true
+      release_version: "0.9"
 
 variables:
   CI_DEBUG_TRACE: "true"
