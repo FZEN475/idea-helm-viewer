@@ -8,12 +8,12 @@ include:
       release_version: "0.9"
 
 
-workflow:
-  rules:
-    - if: "$CI_COMMIT_TAG"
-      variables:
-        ORG_GRADLE_PROJECT_pluginVersion: "$CI_COMMIT_TAG"
-        EXTENCION: ".zip"
+#workflow:
+#  rules:
+#    - if: "$CI_COMMIT_TAG"
+#      variables:
+#        ORG_GRADLE_PROJECT_pluginVersion: "$CI_COMMIT_TAG"
+#        EXTENCION: ".zip"
 
 variables:
   CI_DEBUG_TRACE: "true"
