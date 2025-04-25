@@ -48,6 +48,7 @@ public class Action {
             commandLine.addParameter("."+state.chart_path);
             commandLine.addParameter("-f");
             commandLine.addParameter("."+state.values_path);
+            commandLine.addParameter("--debug");
         }
         commandLine.setCharset(Charset.forName("UTF-8"));
         commandLine.setWorkDirectory(project.getBasePath());
