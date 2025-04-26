@@ -62,7 +62,8 @@ public class Action {
                 Objects.requireNonNull(AppSettings.getInstance().getState());
         FileDocumentManager.getInstance().saveDocument(editor.getDocument());
         if (!state.chart_path.isEmpty() && !state.helm_path.isEmpty()
-                && file.getVirtualFile().getPath().contains(project.getBasePath()+state.chart_path)){
+                && file.getVirtualFile().getPath().contains(project.getBasePath()+state.chart_path)
+                && file.getVirtualFile().getPath().contains(project.getBasePath()+state.helm_path)){
             ConfigurationType type = ConfigurationTypeUtil.findConfigurationType("HelmViewerRunConfiguration");
             Arrays.stream(type.getConfigurationFactories()).forEach(e -> {
                 if (e instanceof myConfigurationFactory) {
